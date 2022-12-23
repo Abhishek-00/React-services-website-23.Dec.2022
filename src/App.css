@@ -1,38 +1,222 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.navbar {
+    background-color: #fff !important;
+    width: 100vw;
+    transition: all 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar a {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    margin: 4px 5px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar-brand {
+    font-size: 3rem !important;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 60px;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    background-color: #028aa9;
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s;
+
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-brand:hover {
+    transform: scale(1.5);
+    border-radius: 7px;
+    z-index: 2;
+    box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.35);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+@keyframes rotate {
+
+    0%,
+    50%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: center;
+    }
+
+    25% {
+        transform: rotate(45deg);
+        transform-origin: center;
+    }
+
+    75% {
+        transform: rotate(-45deg);
+        transform-origin: center;
+    }
+}
+
+.navbar-upper {
+    padding: 3px 80px;
+}
+
+
+.menu-active {
+    border-bottom: 1px solid rgb(21, 144, 216);
+}
+
+
+
+
+.nav-item a:hover {
+    color: rgb(21, 144, 216);
+}
+
+.home-left h1 {
+    font-size: 3rem;
+    margin: 0 0 20px 0;
+    color: black;
+}
+
+.home-left h3 {
+    font-size: 1.4rem;
+}
+
+#header {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    padding: 0 100px 0px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-name {
+    color: rgb(21, 144, 216);
+}
+
+.header-img {
+    text-align: center;
+    margin: auto;
+}
+
+
+.animate {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+    width: 500px;
+}
+
+@-webkit-keyframes up-down {
+    0% {
+        transform: translateY(20px);
+    }
+
+    1000% {
+        transform: translateY(-20px);
+    }
+}
+
+
+@keyframes up-down {
+    0% {
+        transform: translateY(20px);
+    }
+
+    1000% {
+        transform: translateY(-20px);
+    }
+}
+
+.top-bottom {
+    background-color: #b5ecf8 !important;
+}
+
+
+
+
+
+
+/* card style */
+
+.card-btn {
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.card-btn:hover {
+    transform: scale(1.1);
+    z-index: 3;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card {
+    border-radius: 7px;
+    transition: all 0.8s;
+}
+
+.card:hover {
+    transform: scale(1.01);
+    border-radius: 7px;
+    z-index: 2;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+    cursor: pointer;
+    transition: all 0.2s;
+
+}
+
+.card img:hover {
+    transform: scale(1.03);
+    border-radius: 7px;
+    z-index: 2;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 30px 30px 30px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #header {
+        width: 100%;
+        height: 100vh;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .navbar-upper {
+        padding: 3px 30px;
+    }
+
+    .navbar-brand {
+        line-height: 50px;
+
+    }
+
+
 }
